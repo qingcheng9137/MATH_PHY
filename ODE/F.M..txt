@@ -1,0 +1,10 @@
+Lecture 29 introduces a pretty way to find the solutions to X'=AX(2 by 2),
+which is called Matrix Exponential.And the general calculated formular for
+e^(At) is X·X(0)^(-1),which is a good way since we don't need to care about
+anything about eigens.
+
+My question is that X,the fundamental matrix,which consists of 2 independent
+colunm vectors(both solutions to X'=AX,and they are all functions of t). However,to find the solution of the equation,we have to use eigens tool. 
+And it seems that we don't have any other methods except for characteristic
+equations(just eigens' method).Is there any way that we really don't need to
+calculate the characteristic equations and give the F.M?And what's the real difference between matrix exponential and F.M?
