@@ -1,4 +1,4 @@
-#MathPhyg#
+#MATH_PHY
 
 In this repository,I will show my exploration in math and physics.Besides I'll give my detailed learning plan about
 math,physics,and computer science.
