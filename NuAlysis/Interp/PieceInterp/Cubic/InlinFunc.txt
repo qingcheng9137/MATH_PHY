@@ -1,0 +1,35 @@
+MATLAB: spline:Inline Cubic Spline Function,the default condition is Not-a-Knot End Condition.
+			   But if the number of variables of y is two more than that of x,it use the 
+			   clamped end condition.
+
+There are three situations for the cubic spline: 
+		   natural condition: second derivative for the first and last point is 0.
+		   clamped end condition: first derivative for the first and last point is fixed to some values
+		   not-a-knot end condition:third derivative for the second and the second from last points is continue.
+ATTENTION: Generally speaking,the conclusions of natural and not-a-knot condition is more accurate.
+	       And the natural condition may lead to the curve back to straight lines.The not-a-knot 
+	       condition is more like the curve itself.Reference the definitions.
+		 
+% generate 9 equal_distance sampling points
+>> x=linspace(-1,1,9);
+>> y=1./(1+25*x.^2);
+% function linspace generate 100 points which have equal distance 
+>> xx=linspace(-1,1);
+>> yy=spline(x,y,xx);
+% If we don't explain,linspace will generate 100 data points,the 
+% second statement (xx,yy) means the solid lines.
+>> yr=1./(1+25*xx.^2);
+>> plot(x,y,'o',xx,yy,xx,yr,'--')
+Warning: MATLAB has disabled some advanced graphics rendering features by switching to software OpenGL. For more information,
+click here. 
+% 1 and -4 mean the first derivative of the first and the last point.
+>> yc=[1 y -4];
+>> yyc=spline(x,yc,xx);
+>> plot(x,y,'o',xx,yyc,xx,yr,'--')
+
+MATLAB:interp1:yi=interp1(x,y,xi,'method')
+method: 1.nearest
+		2[default].linear
+		3[cubic].spline:always smooth.
+		4[cubic].pchip/cubic:Subsection cubic Hermitian interpolation.If the data is not smooth,volatility is very small.
+							 Because the curve is not outside of the known data.But spline isn't.

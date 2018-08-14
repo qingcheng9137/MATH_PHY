@@ -1,0 +1,28 @@
+N points,and there is only one curve which goes through these 
+n points and the power of the curve is n-1.
+
+According to the curve fitting function polyfit() and polyval()
+It's easy to obtain the equation of the curve.
+
+But the curve is highly pathological,the error is very sensitive. 
+We call the matrices Vandermonde matrices,which is obtain by solve
+linear equations.
+
+So we have Newtint and Lagrange methods.
+
+>> format long
+>> T=[300 400 500];
+>> density=[0.616 0.525 0.457];
+>> p=polyfit(T,density,2)
+
+p =
+
+   0.000001150000000  -0.001715000000000   1.026999999999995
+
+>> d=polyval(p,350)
+
+d =
+
+   0.567625000000000
+
+>> 
