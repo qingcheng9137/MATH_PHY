@@ -1,0 +1,11 @@
+TO DO:
+1.MIT & Signal and Systems 10,and textbook update.
+2.MIT & Algorithm and Data structure,and textbook update,try java program.
+3.Standford & ML/Ng,update at least half Chapter,with notebook,and octave.
+4.DO Probality and Statiscs like what I do to AM.
+5.Analog ppt on BAIDUWENKU
+6.GRE words review
+7.TPO1
+
+DONE:
+
